@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "spc": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/spc_server.py"]
+    }
+  }
+}
