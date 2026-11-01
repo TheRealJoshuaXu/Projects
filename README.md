@@ -11,7 +11,7 @@ semiconductor fabrication, power electronics and failure investigation.
 | [SPC Analysis Toolkit](spc-toolkit/) | Statistical process control, DOE, AI-assisted analysis | Python, SciPy, MCP |
 | [Thin-Film Microheater and RTD](microheater-rtd/) | Cleanroom fabrication and characterisation | KLayout, maskless lithography, PECVD |
 | [45 nm CMOS RF and Analog Blocks](cmos-rf-analog/) | IC design and simulation | Cadence Virtuoso, Spectre |
-| [Marine Renewable Energy Harvester](marine-energy-harvester/) | Power subsystem design, bring-up and validation | Altium Designer |
+| [Underwater Acoustic Energy Harvester](marine-energy-harvester/) | Power management design, layout and validation | Altium Designer, Python |
 | [Laser Display Robot Motion Control Board](laser-robot-motion-board/) | Mixed-signal PCB design and commissioning | Altium Designer |
 
 ---
@@ -36,25 +36,43 @@ tests pass. The DOE recovered a planted +8 temperature effect as +7.65 and a
 
 ## [Thin-Film Microheater and RTD](microheater-rtd/)
 
-A nickel-chromium microheater with an integrated resistance temperature
-detector, taken from layout through fabrication to measurement in the UBC
-cleanroom: maskless photolithography, thermal evaporation with lift-off,
-PECVD silicon nitride and wet etch. Measured resistance came out about three
-times the value calculated from sheet resistance, and the write-up works
-through why.
+A nickel microheater with an integrated resistance temperature detector,
+taken from KLayout through the UBC cleanroom: maskless photolithography,
+thermal evaporation with lift-off, PECVD silicon nitride and wet etch. I then
+calibrated the RTD (TCR about 7.0 × 10⁻³ per °C), compared it against an
+infrared camera, and worked through why the measured resistance was three
+times the prediction.
+
+<p>
+  <img src="microheater-rtd/images/wafer.jpg" width="40%" alt="Patterned wafer">
+  <img src="microheater-rtd/images/temperature-vs-power.png" width="56%" alt="Heater temperature vs power from the RTD and an infrared camera">
+</p>
 
 ## [45 nm CMOS RF and Analog Blocks](cmos-rf-analog/)
 
-A 5.25 GHz LC oscillator (−119.0 dBc/Hz phase noise), a cascode low-noise
-amplifier (2.05 dB noise figure) and a two-stage op-amp, designed and
-simulated in Cadence with industry-supplied on-chip inductor models.
+Three circuits designed and simulated in Cadence, sized with the
+gm/I<sub>D</sub> method:
 
-## [Marine Renewable Energy Harvester](marine-energy-harvester/)
+- a 5.25 GHz cascode LNA with 18.3 dB gain and a 2.05 dB noise figure
+- an LC VCO with −119.0 dBc/Hz phase noise at 1 MHz and an 11.1% tuning range
+- a two-stage op-amp with 46.4 dB gain, 692 MHz unity-gain frequency and a
+  63.8° phase margin
+
+<p>
+  <img src="cmos-rf-analog/images/vco-schematic.png" width="40%" alt="VCO schematic">
+  <img src="cmos-rf-analog/images/vco-phase-noise.png" width="56%" alt="VCO phase noise plot">
+</p>
+
+## [Underwater Acoustic Energy Harvester](marine-energy-harvester/)
 
 Capstone project, team of five, sponsored through the NATO Science for Peace
-and Security programme. I owned the power subsystem from load budget and
-converter topology through schematic, multilayer layout and bench bring-up,
-and wrote the validation plan.
+and Security programme. The system harvests ship noise through a
+piezoelectric transducer to power underwater sensors. I owned the BQ25570
+boost converter and power management subsystem: IC selection, threshold
+design, layout, a second revision with switchable current sensing, and the
+validation plan.
+
+<img src="marine-energy-harvester/images/board-rev2.png" width="70%" alt="JM-111 Rev. 2 board layout">
 
 ## [Laser Display Robot Motion Control Board](laser-robot-motion-board/)
 
