@@ -65,7 +65,7 @@ us a working baseline for schematic and layout.
 
 At these power levels, oscilloscope noise is not negligible next to the
 signal. We captured 100-second records of voltage and current with
-differential probes and wrote a Python script that multiplies them and
+differential probes, and I wrote a Python script that multiplies them and
 integrates over the whole record, so the noise averages towards zero and the
 real input power stands out.
 

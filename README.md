@@ -12,7 +12,7 @@ semiconductor fabrication, power electronics and failure investigation.
 | [Thin-Film Microheater and RTD](microheater-rtd/) | Cleanroom fabrication and characterisation | KLayout, maskless lithography, PECVD |
 | [45 nm CMOS RF and Analog Blocks](cmos-rf-analog/) | IC design and simulation | Cadence Virtuoso, Spectre |
 | [Underwater Acoustic Energy Harvester](marine-energy-harvester/) | Power management design, layout and validation | Altium Designer, Python |
-| [Laser Display Robot Motion Control Board](laser-robot-motion-board/) | Mixed-signal PCB design and commissioning | Altium Designer |
+| [Laser Light Show Robot](laser-robot-motion-board/) | Motion control board, PID position control | Altium Designer |
 
 ---
 
@@ -74,8 +74,15 @@ validation plan.
 
 <img src="marine-energy-harvester/images/board-rev2.png" width="70%" alt="JM-111 Rev. 2 board layout">
 
-## [Laser Display Robot Motion Control Board](laser-robot-motion-board/)
+## [Laser Light Show Robot](laser-robot-motion-board/)
 
-A custom multilayer board combining H-bridge motor drive, encoder feedback
-and on-board power regulation, built, commissioned and debugged on the
-assembled robot.
+A two-axis robot that steers a laser through yaw and pitch gearboxes, with
+encoder feedback and PID control on each axis, to trace shapes. Team of
+five. I designed the custom multilayer control board (H-bridge motor drive,
+encoder feedback, on-board power regulation), then built, commissioned and
+debugged it on the assembled robot.
+
+<p>
+  <img src="laser-robot-motion-board/images/robot.jpg" width="52%" alt="The assembled laser robot">
+  <img src="laser-robot-motion-board/images/board-3d.jpg" width="44%" alt="3D render of the control board">
+</p>
