@@ -12,7 +12,7 @@ semiconductor fabrication, power electronics and failure investigation.
 | [Thin-Film Microheater and RTD](microheater-rtd/) | Cleanroom fabrication and characterisation | KLayout, maskless lithography, PECVD |
 | [45 nm CMOS RF and Analog Blocks](cmos-rf-analog/) | IC design and simulation | Cadence Virtuoso, Spectre |
 | [Underwater Acoustic Energy Harvester](marine-energy-harvester/) | Power management design, layout and validation | Altium Designer, Python |
-| [Laser Light Show Robot](laser-robot-motion-board/) | Motion control board, PID position control | Altium Designer |
+| [Laser Light Show Robot](laser-robot-motion-board/) | Encoder feedback, firmware and PID debugging | C firmware |
 
 ---
 
@@ -78,9 +78,8 @@ validation plan.
 
 A two-axis robot that steers a laser through yaw and pitch gearboxes, with
 encoder feedback and PID control on each axis, to trace shapes. Team of
-five. I designed the custom multilayer control board (H-bridge motor drive,
-encoder feedback, on-board power regulation), then built, commissioned and
-debugged it on the assembled robot.
+five. I designed the encoder feedback that reports each axis's position and
+debugged the firmware, including the PID position loop.
 
 <p>
   <img src="laser-robot-motion-board/images/robot.jpg" width="52%" alt="The assembled laser robot">
