@@ -4,7 +4,7 @@ ELEC 391, University of British Columbia, Feb–Apr 2024. Team C7, five
 people. [← All projects](../README.md)
 
 A two-axis robot that steers a laser to trace shapes. Motors turn the yaw
-and pitch axes through printed gearboxes, encoders report position, and a
+and pitch axes through gearboxes, encoders report position, and a
 PID loop on each axis drives the laser to a sequence of target points.
 
 <p>
