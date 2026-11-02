@@ -13,6 +13,15 @@ I worked across every part of the system with the team: the transmitter and
 receiver firmware in C, the Nunchuk joystick interface, the H-bridge motor
 drive and the receiver circuit tuning.
 
+<p>
+  <img src="images/robot-photo.jpg" width="49%" alt="The receiver robot: PIC32 breadboard on a two-wheel chassis with the motor H-bridges">
+  <img src="images/transmitter-photo.jpg" width="49%" alt="The transmitter: EFM8 board, H-bridge drive, Nunchuk connector and LCD">
+</p>
+
+*Left: the receiver robot, with the PIC32 and motor H-bridges on the
+chassis. Right: the hand-held transmitter, with the EFM8 board, LC drive,
+Nunchuk connector and LCD.*
+
 ![System diagram: transmitter, magnetic link, receiver and motors](images/system-diagram.png)
 
 ## Two modes

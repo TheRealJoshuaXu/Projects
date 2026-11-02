@@ -105,4 +105,7 @@ drives an LC tank at its 15.92 kHz resonance, and a PIC32 receiver decodes
 frequency for commands and coil voltage for distance. It reached 130 cm in
 command mode and held a 50–60 cm tracking distance. Team of six.
 
-<img src="magnetic-field-robot/images/range-vs-frequency.png" width="60%" alt="Receive range vs transmitter frequency">
+<p>
+  <img src="magnetic-field-robot/images/robot-photo.jpg" width="34%" alt="The receiver robot">
+  <img src="magnetic-field-robot/images/range-vs-frequency.png" width="62%" alt="Receive range vs transmitter frequency">
+</p>
