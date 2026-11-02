@@ -69,6 +69,44 @@ differential probes, and I wrote a Python script that multiplies them and
 integrates over the whole record, so the noise averages towards zero and the
 real input power stands out.
 
+## Measuring efficiency
+
+I measured the output power with a DC power analyzer, and we combined it
+with the input power from the scope captures to plot efficiency, both for
+the whole system and for the full-bridge-only configuration.
+
+- **Against input current:** whole-system efficiency settled at about 73–75%
+  from 2.5 mA to 10 mA, dropping sharply below about 0.5 mA.
+- **With the transducer driven across 77.5–97.5 Hz:** whole-system efficiency
+  peaked at about 34% at 85 Hz, above the project's 30% requirement. The
+  full-bridge-only configuration peaked at about 37% near 83 Hz.
+- **What it showed:** P-SSHI has potential to raise the harvested energy,
+  but in this build it matched poorly with the boost converter and lost
+  performance at higher frequencies.
+
+<img src="images/efficiency-vs-current.png" width="70%" alt="Efficiency vs input current, whole system and full bridge only">
+
+<p>
+  <img src="images/efficiency-wst-vs-frequency.png" width="49%" alt="Whole-system efficiency vs frequency, peak about 34% at 85 Hz">
+  <img src="images/efficiency-fbt-vs-frequency.png" width="49%" alt="Full-bridge-only efficiency vs frequency, peak about 37% near 83 Hz">
+</p>
+
+*Whole-system (left) and full-bridge-only (right) efficiency against
+transducer drive frequency.*
+
+## Bench verification
+
+With the transducer as the input, the IC's storage rail (VSTOR) shows the
+boost converter working as designed: it leaves cold start at about 1.8 V,
+cycles until the supercapacitor passes its undervoltage threshold, then
+charges and holds at the overvoltage threshold.
+
+![VSTOR waveform from cold start to the overvoltage threshold](images/vstor-cold-start.png)
+
+<img src="images/test-bench.jpg" width="70%" alt="Test bench with the board, instruments and power analyzer">
+
+*The validation bench.*
+
 ## Validation and debugging
 
 - **Power budget:** I built the power budget showing an intermittent marine

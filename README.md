@@ -72,7 +72,9 @@ and Security programme. The system harvests ship noise through a
 piezoelectric transducer to power underwater sensors. I owned the BQ25570
 boost converter and power management subsystem: IC selection, threshold
 design, layout, a second revision with switchable current sensing, and the
-validation plan.
+validation plan, including efficiency measured with a DC power analyzer
+(about 34% peak for the whole system with the transducer, above the 30%
+target).
 
 <img src="marine-energy-harvester/images/board-rev2.png" width="70%" alt="JM-111 Rev. 2 board layout">
 
