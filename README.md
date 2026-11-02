@@ -13,6 +13,8 @@ semiconductor fabrication, power electronics and failure investigation.
 | [45 nm CMOS RF and Analog Blocks](cmos-rf-analog/) | IC design and simulation | Cadence Virtuoso, Spectre |
 | [Underwater Acoustic Energy Harvester](marine-energy-harvester/) | Power management design, layout and validation | Altium Designer, Python |
 | [Laser Light Show Robot](laser-robot-motion-board/) | Encoder feedback, firmware and PID debugging | C firmware |
+| [Reflow Oven Controller](reflow-oven-controller/) | 8051 firmware, thermocouple sensing, power control | 8051 assembly, Python |
+| [Magnetic-Field-Controlled Robot](magnetic-field-robot/) | Wireless magnetic link, MCU firmware, motor drive | C, PIC32, EFM8, I2C |
 
 ---
 
@@ -85,3 +87,22 @@ debugged the firmware, including the PID position loop.
   <img src="laser-robot-motion-board/images/robot.jpg" width="52%" alt="The assembled laser robot">
   <img src="laser-robot-motion-board/images/board-3d.jpg" width="44%" alt="3D render of the control board">
 </p>
+
+## [Reflow Oven Controller](reflow-oven-controller/)
+
+An 8051 microcontroller that runs a toaster oven through a full solder
+reflow profile: thermocouple and op-amp sensing into an SPI ADC, two
+non-blocking state machines in 8051 assembly, PWM power control through a
+solid-state relay, and an LCD and voice readout. It tracked a reference
+thermometer to within about ±3 °C and baked boards successfully. Team of six.
+
+<img src="reflow-oven-controller/images/temperature-profile.png" width="60%" alt="Logged oven temperature through a reflow cycle">
+
+## [Magnetic-Field-Controlled Robot](magnetic-field-robot/)
+
+A battery-powered robot steered by a magnetic field: an EFM8 transmitter
+drives an LC tank at its 15.92 kHz resonance, and a PIC32 receiver decodes
+frequency for commands and coil voltage for distance. It reached 130 cm in
+command mode and held a 50–60 cm tracking distance. Team of six.
+
+<img src="magnetic-field-robot/images/range-vs-frequency.png" width="60%" alt="Receive range vs transmitter frequency">
